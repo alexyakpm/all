@@ -1,0 +1,13 @@
+entity\Task.class
+interfaces\CRUD.class
+interfaces\impl\CRUDImpl.class
+controllers\TaskController.class
+entity\User.class
+entity\Log.class
+start\Main.class
+controllers\LogController.class
+controllers\MainController$1.class
+controllers\MainController$3.class
+controllers\MainController$2.class
+controllers\MainController.class
+controllers\EditController.class

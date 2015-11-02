@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <HBox>
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="addButton" mnemonicParsing="false" onAction="#clickButton" text="Добавить ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="editButton" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Редактировать">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="dellButton" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Удалить">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="addTask" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Добавить задачу">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="editTask" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Редактировать задачу">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="dellTask" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Удалить задачу">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="addLog" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Добавить логи задачи">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="editLog" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Редактировать логи">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="dellLog" disable="true" mnemonicParsing="false" onAction="#clickButton" text="Удалить логи">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane prefHeight="503.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tableUser" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                      <TableColumn fx:id="columnFIO" prefWidth="75.0" text="ФИО" />
+                      <TableColumn fx:id="login" prefWidth="75.0" text="Логин" />
+                        <TableColumn fx:id="password" prefWidth="75.0" text="Пароль" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="503.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tableTask" disable="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="taskName" prefWidth="118.0" text="Задача" />
+                        <TableColumn fx:id="taskStatus" prefWidth="127.0" text="Состояние" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="503.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tableLog" disable="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="logTime" prefWidth="75.0" text="Затраченое время" />
+                        <TableColumn fx:id="logComents" prefWidth="75.0" text="Доп. информация" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
